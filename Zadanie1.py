@@ -3,9 +3,7 @@
 def Decorator(F):
     def Rasst(U,U1,t):
         a=F(U,U1,t)
-        c=U*t
-        b=(a*(t*t))/2
-        S=c+b
+        S=U*t+(a*(t*t))/2
 
         print(S,'Расстояние')
     return Rasst
@@ -14,16 +12,16 @@ def Decorator(F):
 def Fizika(U,U1,t):
     a=(U1-U)/t
     print(a,'Ускорение')
-    return Fizika
+    return a
 
 
 try:
     print('Скорость начальная')
-    U=float(input())
+    U=int(input())
     print('Скорость конечная')
-    U1=float(input())
+    U1=int(input())
     print('Время')
-    t=float(input())
+    t=int(input())
     Fizika(U,U1,t)
 
 except ZeroDivisionError:
